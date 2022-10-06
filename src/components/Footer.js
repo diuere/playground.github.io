@@ -13,7 +13,7 @@ export default function Footer() {
                 <SmContact />
             </div>
             <div className="copyright-wrapper">
-                <p>Copyright &copy; 2022 Diuere Santos. All right reserved.</p>
+                <p>Developed by Diuere Souza, 2022.</p>
           </div>
         </div>
     </footer>
