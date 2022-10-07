@@ -27,7 +27,6 @@ export default function QuizHandler(props) {
 
             return optionsGathered;
         }
-
         
         const quizOptions = generateOptions();
 

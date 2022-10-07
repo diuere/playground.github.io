@@ -11,8 +11,6 @@ export default function FontConfig( props ) {
     const { templates, updateTemplates } = useMemeGeneratorStore(state => ({ templates: state.templates, updateTemplates: state.updateTemplates, } ));
 
     const currentTemplate = templates[id];
-
-    console.log(templates[id])
     
     const removeChange = () => {  // function that reset all the changes
         const updatedTemplates = templates.map(tem => tem.id === id ? { ...getMemeTemplate(id), text: templates[id].text } : tem )

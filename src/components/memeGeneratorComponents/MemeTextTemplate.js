@@ -5,7 +5,6 @@ import FontConfig from './FontConfig';
 // zustand state
 import { useMemeGeneratorStore } from '../../store/store';
 
-
 import { resizeMemeText, toggleConfig } from '../../store/functions'; // function that toggles the fontConfig component
 
 export default function MemeTextTemplate( { id, text } ) {

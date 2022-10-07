@@ -15,7 +15,6 @@ export default function MemeTextContent( { text, id } ) {
     dragResizeTemplate(templates[id], mmImageWrapper, points);
   }, [])
 
-
   return (
     <div className={`img-template #${id}`} >
       <div className={`img-template-text #${id}`} style={style}>{text}</div>

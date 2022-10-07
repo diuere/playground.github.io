@@ -1,13 +1,5 @@
 import React from "react";
-
-// function to open game information
-function openGameInfo(){
-    const gameInfoWrapper = document.querySelector("#gameInfoWrapper");
-    const tenzyOverlay = document.querySelector(".tenzy-overlay");
-    
-    tenzyOverlay.classList.add("tenzyActiveOverlay");
-    gameInfoWrapper.classList.add("opened");
-}
+import { openGameInfo } from "../../store/functions";
 
 export default function InfoBtn(props){
     const { resetDice, isDone, hold } = props;

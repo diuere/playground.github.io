@@ -5,8 +5,6 @@ $clr-grey-2: #62686f;
 // $clr-primary-1: #f1f5f8;
 $fontClr-primary: #e9eaeb;
 
-
-
 $main-backgroundColor: #f6eded;
 $background-color-1: #c13333;
 $background-color-2: #c14b4b;
@@ -191,7 +189,6 @@ $break-points: (
     }
 }
 
-
 @keyframes activate-quizBtn{
     from{
         scale: 0;
@@ -230,14 +227,14 @@ $break-points: (
 
 
 
+
+
+
 *, :after, :before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
-
 
 
 
@@ -367,6 +364,8 @@ main{
 
 
 
+
+
 .logo{
     font-size: 1.5rem;
     
@@ -417,8 +416,6 @@ main{
     @include la {
         display: none;
     }
-
-    
 }
 
 .menu-overlay{
@@ -835,8 +832,6 @@ main{
     max-width: 30rem;
     box-shadow: .2rem .2rem .5rem .2rem $clr-dark-1;
     animation: pop-up .3s linear forwards;
-
-
     
     /* dice content */
     .dice-wrapper{
@@ -1293,9 +1288,7 @@ main{
 .generate-mm-wrapper{
     display: flex;
     justify-content: space-between;
-    // flex-wrap: wrap;
     margin: 1rem 0;
-    
 }
 
 
@@ -1749,7 +1742,6 @@ main{
         font-size: calc(var(--quiz-fontSize) * .45);
         box-shadow: 0 0 .5rem $clr-dark-1;
         cursor: pointer;
-        
     }
 }
 
@@ -1873,7 +1865,6 @@ main{
     align-items: center;
     text-align: center;
     font-size: calc(var(--quiz-fontSize) * .4);
-    
 }
 
 

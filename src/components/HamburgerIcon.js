@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export default function HamburgerIcon({ toggleMenu, toggleAddMeme, toggleTicTacGameStatus, toggleQuizOverLay }) {
   const handleClick = () => {
     if(toggleMenu) toggleMenu();

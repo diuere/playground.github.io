@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+// import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 import { footerObserver, hamburgerIconObserver, headerObserver, pageObserver } from "./store/observers";
 import { toggleMenu } from "./store/functions";
@@ -27,7 +27,6 @@ function App() {
     headerObserver({ toggleMenu });
     hamburgerIconObserver({ toggleMenu });
     footerObserver();
-    
   }, []);
 
   return (
@@ -46,7 +45,6 @@ function App() {
           <Footer />
         </div>
       </BrowserRouter>
-      <ReactQueryDevtools initialIsOpen={false} position="bottom-left"/>
     </QueryClientProvider>
     );
 }

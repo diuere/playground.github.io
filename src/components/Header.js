@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { toggleMenu } from '../store/functions';
 import Navbar from "./Navbar";
 
-
 export default function Header() {
   return (
     <header id="mainHeader">

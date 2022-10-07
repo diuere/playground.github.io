@@ -42,6 +42,35 @@ export const addSelected = (e) => { // handles the link selected action once the
 
 
 
+
+// the following functions are related to the tenzy component
+
+// function to remove the tenzy game information
+export const  closeGameInfo = () => {
+    const gameInfoWrapper = document.querySelector("#gameInfoWrapper");
+    const tenzyOverlay = document.querySelector(".tenzy-overlay");
+    
+    tenzyOverlay.classList.remove("tenzyActiveOverlay");
+    gameInfoWrapper.classList.remove("opened");
+}
+
+// function to open the tenzy game information
+export const openGameInfo = () => {
+    const gameInfoWrapper = document.querySelector("#gameInfoWrapper");
+    const tenzyOverlay = document.querySelector(".tenzy-overlay");
+    
+    tenzyOverlay.classList.add("tenzyActiveOverlay");
+    gameInfoWrapper.classList.add("opened");
+}
+
+
+
+// ------------------------------------------------------------------------------------------------
+
+
+
+
+
 // the following functions are related to the memeGeneratorPage
 
 export const getMemeTemplate = (id) => ( // shall be used as the data blueprint for each meme template that shall be created
@@ -62,7 +91,6 @@ export const getMemeTemplate = (id) => ( // shall be used as the data blueprint 
         opacity: "1"
     }
 );
-
 
 export const getMemeImageUrl = async (memeURL) => { // handles the fetch request from the get meme API
     const response = await fetch(`${memeURL}`);

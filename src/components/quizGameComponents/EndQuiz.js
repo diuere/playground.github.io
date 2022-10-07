@@ -39,7 +39,6 @@ export default function EndQuiz(props) {
                     newPlayers.splice(i, (newPlayers.length - i), { name: player.name, score: player.score, difficulty: player.difficulty, time: player.time }, ...playersCopied); // once it finds it, it should insert this new player into the previous's player index, and insert the previous one to the next index
                     break;
                   }
-
                 }
               }
 
