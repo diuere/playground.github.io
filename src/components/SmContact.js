@@ -8,25 +8,25 @@ export default function SmContact({text}) {
   return (
     <ul className="sm-contact-wrapper">
         <li className="sm-contact-icon">
-            <a href="#" target="_blank" aria-label="facebook contact">
+            <a href="https://github.com/diuere" target="_blank" aria-label="facebook contact">
                 <BsGithub /> <span>{text ? text[0] : ""}</span>
             </a>
             
         </li>
         <li className="sm-contact-icon">
-            <a href="#" target="_blank" aria-label="twitter contact">
+            <a href="https://twitter.com/diuere_souza" target="_blank" aria-label="twitter contact">
                 <BsTwitter /> <span>{text ? text[1] : ""}</span>
             </a>
             
         </li>
         <li className="sm-contact-icon">
-            <a href="#" target="_blank" aria-label="instagram contact">
+            <a href="https://www.instagram.com/diuere_souza/" target="_blank" aria-label="instagram contact">
                 <BsInstagram /> <span>{text ? text[2] : ""}</span>
             </a>
             
         </li>
         <li className="sm-contact-icon">
-            <a href="#" target="_blank" aria-label="linkedin contact">
+            <a href="https://br.linkedin.com/in/diuere-souza-2a72b9223" target="_blank" aria-label="linkedin contact">
                 <BsLinkedin /> <span>{text ? text[3] : ""}</span>
             </a>
         </li>
