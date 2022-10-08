@@ -8,7 +8,7 @@ export default function ContactPage() {
     const sendEmail = (e) => { // sending emails using EmailJS
       e.preventDefault();
   
-      emailjs.sendForm('service_7mfuzbo', 'template_ob9k3p8', form.current, 'OjtO9_H9y03jj1H36')
+      emailjs.sendForm('service_e8tjba3', 'template_bhovy0m', form.current, 'J-tFMwV5sJF45Q8em')
         .then((result) => {
             console.log(result.text);
         }, (error) => {
@@ -31,9 +31,9 @@ export default function ContactPage() {
             <form ref={form} onSubmit={sendEmail} className="contact-form">
                 <h3>Send an Email</h3>
 
-                <input type="text" name="" id="" placeholder='your name' required/>
-                <input type="email" name="" id="" placeholder='your email' required/>
-                <textarea name="" id="" cols="30" rows="10" placeholder='your message' required/>
+                <input type="text" name="from_name" id="" placeholder='your name' required/>
+                <input type="email" name="from_email" id="" placeholder='your email' required/>
+                <textarea name="message" id="" cols="30" rows="10" placeholder='your message' required/>
                 <button className="contact-btn main-btn-style">
                     <span>send</span>
                 </button>
