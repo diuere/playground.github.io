@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@300&display=swap");
 :root {
   --hero-fontSize: 2.5rem;
   --hero-main-gap: 1.5rem;
@@ -263,6 +264,8 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.1rem;
 }
 
 .hamburger-icon {

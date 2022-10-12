@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@300&display=swap');
+
 $clr-grey-1: #393535;
 // $clr-grey-1: #102a42;
 $clr-grey-1-5: rgba(16, 42, 66, 0.5);
@@ -388,7 +390,8 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: .1rem;
 }
 
 
