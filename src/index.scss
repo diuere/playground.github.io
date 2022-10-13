@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Lora&family=Oswald:wght@300&display=swap');
 
 $clr-grey-1: #393535;
@@ -55,9 +54,9 @@ $meme-background-btn-2: linear-gradient(to right, $meme-clr-5 0%, $meme-clr-6 10
 $main-transition: all .3s ease-in-out;
 $break-points: (
     "esm": 300px,
-    "md": 768px,
-    "la": 1224px,
-    "el": 1524px,
+    "md": 778px,
+    "la": 1078px,
+    "el": 1278px,
     );
 
 
@@ -131,52 +130,82 @@ $break-points: (
     --hero-main-gap: 1.5rem;
 
     // tic tac toe game variables
-    --toe-fontSize: 2rem;
+    --toe-fontSize: 1.5rem;
     --toe-grid-size: 4rem;
 
     // quiz game variables
     --quiz-fontSize: 2rem;
     --quiz-wrapperWidth: 20rem;
     --quiz-wrapperHeight: 20rem;
-    --quiz-main-gap: 1rem;
+    --quiz-main-gap: .75rem;
+
+    // mm generator variables
+    --mm-fontSize: .9rem;
+    --mm-main-gap: .75rem;
 
     // contact variables
-    --contact-fontSize: 2rem;
-    --contact-main-gap: 1.5rem;
+    --contact-fontSize: 1.5rem;
+    --contact-main-gap: 1rem;
+
+    // footer variables
+    --footer-fontSize: .8rem;
+    --footer-main-gap: 1rem;
 
     @include esm{
         --hero-fontSize: 2rem;
         --hero-main-gap: 1rem;
 
-        --toe-fontSize: 1.5rem;
+        // tic tac toe game variables
+        --toe-fontSize: 1.25rem;
         --toe-grid-size: 3rem;
+
+        // mm generator variables
+        --mm-fontSize: .8rem;
+        --mm-main-gap: .5rem;
 
          // quiz game variables
         --quiz-fontSize: 1.5rem;
         --quiz-wrapperWidth: 15rem;
         --quiz-wrapperHeight: 15rem;
         --quiz-main-gap: .5rem;
+
+        // footer variables
+        --footer-fontSize: .6rem;
+        --footer-main-gap: .8rem;
     }
 
     @include md {
         --hero-fontSize: 3rem;
         --hero-main-gap: 1.75rem;
 
-        --toe-fontSize: 2.5rem;
+        // tic tac toe game variables
+        --toe-fontSize: 2rem;
         --toe-grid-size: 6rem;
 
         // quiz game variables
         --quiz-fontSize: 2.5rem;
         --quiz-wrapperWidth: 25rem;
         --quiz-wrapperHeight: 25rem;
-        --quiz-main-gap: 1.2rem;
-    }
+        --quiz-main-gap: 1rem;
 
+        // mm generator variables
+        --mm-fontSize: 1rem;
+        --mm-main-gap: .9rem;
+
+        // contact variables
+        --contact-fontSize: 1.75rem;
+        --contact-main-gap: 1.25rem;
+
+        // footer variables
+        --footer-fontSize: 1rem;
+        --footer-main-gap: 1.2rem;
+    }
+    
     @include la{
         --hero-fontSize: 3.25rem;
         --hero-main-gap: 2rem;
 
-
+        // tic tac toe game variables
         --toe-fontSize: 2.5rem;
         --toe-grid-size: 8rem;
         
@@ -184,11 +213,19 @@ $break-points: (
         --quiz-fontSize: 3rem;
         --quiz-wrapperWidth: 30rem;
         --quiz-wrapperHeight: 30rem;
-        --quiz-main-gap: 1.5rem;
+        --quiz-main-gap: 1.25rem;
+
+        // mm generator variables
+        --mm-fontSize: 1rem;
+        --mm-main-gap: 1rem;
 
         // contact variables
-        --contact-fontSize: 2.5rem;
+        --contact-fontSize: 2rem;
         --contact-main-gap: 1.5rem;
+
+        // footer variables
+        --footer-fontSize: 1rem;
+        --footer-main-gap: 1.2rem;
     }
 }
 
@@ -294,6 +331,13 @@ $break-points: (
     z-index: 9;
 }
 
+.tenzy-btn, .die, .reset-tic-tac-game, .quiz-main-btn-style, .main-btn-style{
+    font-family: 'Kanit', sans-serif;
+}
+
+
+
+
 header{
     position: relative;
     border-bottom: .5rem solid $clr-dark-1;
@@ -335,6 +379,7 @@ header{
 body{
     position: relative;
     font-family: 'Kanit', sans-serif;
+    // font-family: 'Lora', serif;
 }
 
 a{
@@ -394,6 +439,11 @@ main{
     align-items: center;
     font-family: 'Oswald', sans-serif;
     letter-spacing: .1rem;
+    
+    .main-btn-style{
+        font-family: 'Oswald', sans-serif;
+        border-radius: .5rem;
+    }
 }
 
 
@@ -469,7 +519,6 @@ main{
             margin: auto;
             padding: .3rem 0;
             width: 80%;
-            border-radius: 1rem;
             font-size: 1.7rem;
             font-weight: 600;
             background-color: $clr-bright-red;
@@ -478,6 +527,7 @@ main{
             transition: $main-transition;
             
             &::after{
+                border-radius: .5rem;
                 background-color: $clr-dark-red;
                 background-image: $clr-background-gradient-1;
             }
@@ -588,8 +638,7 @@ main{
         }
         
         .contact-btn{ 
-            padding: .5rem 2rem;
-            border-radius: 1rem;
+            padding: .4rem 2rem;
             font-size: 1.5rem;
             background-color: transparent;
             background-image: none;
@@ -742,81 +791,6 @@ main{
 
 
 
-
-.rollback-wrapper{
-    position: fixed;
-    left: 10%;
-    bottom: -10%;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: $main-transition;
-    z-index: 99;
-    
-    a{
-        color: $clr-grey-1;
-        transition: $main-transition;
-    }
-}
-.rollback{
-    bottom: 10%;
-}
-
-.main-footer{
-    padding: 1rem 0;
-    background-color: $clr-dark-1;
-    background-image: $clr-background-gradient-1;
-    color: $fontClr-primary;
-
-    @include background-config;
-    
-    .container{
-        position: relative;
-        max-width: 30rem;
-    }
-
-    .content-wrapper{
-        text-align: center;
-        margin: 1rem 0;
-        
-        h4{
-            font-size: 1.5rem;
-            letter-spacing: .1rem;
-        }
-
-        p{
-            margin: 1.5rem 0;
-            letter-spacing: .05rem;
-        }
-    }
-    
-    .sm-contact-wrapper{
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-        
-        li{
-            font-size: 1.2rem;
-            
-            &:hover{
-                transform: scale(1.2);
-            }
-        }
-        
-        a{
-            color: $fontClr-primary;
-            transition: $main-transition;
-            cursor: unset;
-        }
-    }
-    
-    .copyright-wrapper{
-        padding: 1rem 0;
-        text-align: center;
-        letter-spacing: .05rem;
-    }
-}
 
 .tenzyGame-page{
     position: relative;
@@ -1067,12 +1041,16 @@ main{
 }
 
 .mm-generator-wrapper{
-    padding: 2rem;
-    border-radius: .5rem;
+    padding: calc(var(--mm-main-gap) * .8);
+    border-radius: .3rem;
     background: $meme-clr-1;
     max-width: 30rem;
     box-shadow: .2rem .2rem .4rem .2rem $clr-dark-2;
     animation: pop-up .3s linear forwards;
+
+    .main-btn-style{
+        border-radius: .2rem;
+    }
 }
 .toggleAddMeme{
     .mm-overlay{
@@ -1090,6 +1068,7 @@ main{
     display: grid;
     position: relative;
     width: 100%;
+    border-radius: .2rem;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
@@ -1098,6 +1077,7 @@ main{
     user-select: none;
     
     img{
+        border-radius: .2rem;
         width: 100%;
     }
 
@@ -1275,10 +1255,10 @@ main{
 
 
 .add-img-btn, .get-random-mm-btn{
-    padding: .3rem 1rem;
+    padding: calc(var(--mm-main-gap) * .2) calc(var(--mm-main-gap) * .8);
     border: none;
     border-radius: .5rem;
-    font-size: .9rem;
+    font-size: calc(var(--mm-fontSize));
     background-color: $clr-dark-red;
     background-image: $meme-background-btn;
     color: $fontClr-primary;
@@ -1449,11 +1429,12 @@ main{
     margin-top: 1rem;
 }
 .create-template, .reset-templates{
-    padding: .3rem .6rem;
+    padding: calc(var(--mm-main-gap) * .3) calc(var(--mm-main-gap) * .8);
     border: none;
     border-radius: .3rem;
     background-color: $meme-clr-6;
     background-image: $meme-background-btn-2;
+    font-size: calc(var(--mm-fontSize));
     color: $fontClr-primary;
 
     &:hover{
@@ -1494,9 +1475,9 @@ main{
 }
 .ticTacToe-body-wrapper{
     display: grid;
-    gap: 2rem;
+    gap: calc(var(--toe-grid-size) * .3);
     margin: auto;
-    padding: 3rem;
+    padding: calc(var(--toe-grid-size) * .4);
     border-radius: .3rem;
     background-color: $toe-background-color-1;
     color: $fontClr-primary;
@@ -1586,10 +1567,10 @@ main{
 
 .reset-tic-tac-game{
     margin: auto;
-    padding: .4rem 0;
+    padding: calc(var(--toe-fontSize) * .15) 0;
     border: none;
     border-radius: .3rem;
-    width: min(80%, 12rem);
+    width: min(70%, 12rem);
     font-size: calc(var(--toe-fontSize) * .6);
     transition: $main-transition;
     letter-spacing: .1rem;
@@ -1609,7 +1590,7 @@ main{
     display: grid;
     gap: var(--quiz-main-gap);
     margin: auto;
-    padding: 2rem;
+    padding: calc(var(--quiz-fontSize) * .8);
     border-radius: .3rem;
     background-color: $quiz-main-background-color;
     box-shadow: .2rem .2rem .5rem .2rem $clr-dark-1;
@@ -2019,6 +2000,7 @@ main{
                 }
 
                 display: flex;
+                align-items: center;
                 gap: 1rem;
 
                 &:hover{
@@ -2099,5 +2081,85 @@ main{
                 opacity: 0;
             }
         }
+    }
+}
+
+
+
+
+
+.rollback-wrapper{
+    position: fixed;
+    left: 10%;
+    bottom: -10%;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: $main-transition;
+    z-index: 99;
+    
+    a{
+        color: $clr-grey-1;
+        transition: $main-transition;
+    }
+}
+.rollback{
+    bottom: 10%;
+}
+
+.main-footer{
+    padding: 1rem 0 1.5rem;
+    background-color: $clr-dark-1;
+    background-image: $clr-background-gradient-1;
+    color: $fontClr-primary;
+
+    @include background-config;
+    
+    .container{
+        position: relative;
+        max-width: 30rem;
+    }
+
+    .content-wrapper{
+        text-align: center;
+        margin: 1rem 0;
+        
+        h4{
+            font-size: calc(var(--footer-fontSize) * 1.4);
+            letter-spacing: .1rem;
+        }
+
+        p{
+            margin: 1.5rem 0;
+            font-size: calc(var(--footer-fontSize) * .9);
+            letter-spacing: .05rem;
+        }
+    }
+    
+    .sm-contact-wrapper{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: calc(var(--footer-main-gap) * .8);
+        
+        li{
+            font-size: calc(var(--footer-fontSize) * 1.2);
+            
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+        
+        a{
+            color: $fontClr-primary;
+            transition: $main-transition;
+            cursor: unset;
+        }
+    }
+    
+    .copyright-wrapper{
+        text-align: center;
+        letter-spacing: .05rem;
+        font-size: calc(var(--footer-fontSize) * .8);
     }
 }
