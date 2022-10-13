@@ -160,7 +160,7 @@ $break-points: (
 
     @include md {
         --hero-fontSize: 3rem;
-        --hero-main-gap: 2rem;
+        --hero-main-gap: 1.75rem;
 
         --toe-fontSize: 2.5rem;
         --toe-grid-size: 6rem;
@@ -173,8 +173,8 @@ $break-points: (
     }
 
     @include la{
-        --hero-fontSize: 4rem;
-        --hero-main-gap: 2.5rem;
+        --hero-fontSize: 3.25rem;
+        --hero-main-gap: 2rem;
 
 
         --toe-fontSize: 2.5rem;
@@ -641,7 +641,6 @@ main{
     .container{
         display: grid;
         place-content: center;
-        // gap: var(--hero-main-gap);
         width: 80%;
         
         .hero-img-wrapper{
@@ -664,6 +663,8 @@ main{
     display: flex;
     flex-direction: column;
     margin-bottom: 20vh;
+    align-items: center;
+    text-align: center;
     
     h1{
         color: $clr-dark-1;
@@ -675,28 +676,31 @@ main{
     h2{
         color: $clr-dark-1;
         background-image: $clr-font-gradient-1;
-        margin: calc(var(--hero-main-gap) * .4) 0 calc(var(--hero-main-gap) * .8) ;
+        margin: calc(var(--hero-main-gap) * .3) 0 calc(var(--hero-main-gap) * .5) ;
         font-size: calc(var(--hero-fontSize) * .65);
         @include fontColor;
         
     }
     
     p{
-        color: $clr-dark-1;
         background-image: $clr-font-gradient-1;
         width: 90%;
         font-size: calc(var(--hero-fontSize) * .5);
+        color: $clr-dark-1;
         @include fontColor;
     }
     
     a{  
-        margin: calc(var(--hero-main-gap) * .8) 0 0;
+        margin: calc(var(--hero-main-gap) * .7) 0 0;
         font-size: calc(var(--hero-fontSize) * .5);
-        
+    }
+
+    @include md {
+        text-align: start;
+        align-items: start;
     }
 }
 .get-started-btn{
-    margin-right: auto !important;
     padding: .5rem 1.6rem;
     border-radius: .5rem;
     font-size: 1.5rem;

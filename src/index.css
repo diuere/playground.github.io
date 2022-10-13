@@ -27,7 +27,7 @@
 @media all and (min-width: 768px) {
   :root {
     --hero-fontSize: 3rem;
-    --hero-main-gap: 2rem;
+    --hero-main-gap: 1.75rem;
     --toe-fontSize: 2.5rem;
     --toe-grid-size: 6rem;
     --quiz-fontSize: 2.5rem;
@@ -38,8 +38,8 @@
 }
 @media all and (min-width: 1224px) {
   :root {
-    --hero-fontSize: 4rem;
-    --hero-main-gap: 2.5rem;
+    --hero-fontSize: 3.25rem;
+    --hero-main-gap: 2rem;
     --toe-fontSize: 2.5rem;
     --toe-grid-size: 8rem;
     --quiz-fontSize: 3rem;
@@ -535,6 +535,8 @@ main {
   display: flex;
   flex-direction: column;
   margin-bottom: 20vh;
+  align-items: center;
+  text-align: center;
 }
 .hero-text-wrapper h1 {
   color: #1F1C18;
@@ -550,7 +552,7 @@ main {
 .hero-text-wrapper h2 {
   color: #1F1C18;
   background-image: linear-gradient(to right, #1F1C18, #3d3d3d);
-  margin: calc(var(--hero-main-gap) * 0.4) 0 calc(var(--hero-main-gap) * 0.8);
+  margin: calc(var(--hero-main-gap) * 0.3) 0 calc(var(--hero-main-gap) * 0.5);
   font-size: calc(var(--hero-fontSize) * 0.65);
   background-size: 100%;
   background-clip: "";
@@ -560,10 +562,10 @@ main {
   -moz-text-fill-color: transparent;
 }
 .hero-text-wrapper p {
-  color: #1F1C18;
   background-image: linear-gradient(to right, #1F1C18, #3d3d3d);
   width: 90%;
   font-size: calc(var(--hero-fontSize) * 0.5);
+  color: #1F1C18;
   background-size: 100%;
   background-clip: "";
   -webkit-background-clip: text;
@@ -572,12 +574,17 @@ main {
   -moz-text-fill-color: transparent;
 }
 .hero-text-wrapper a {
-  margin: calc(var(--hero-main-gap) * 0.8) 0 0;
+  margin: calc(var(--hero-main-gap) * 0.7) 0 0;
   font-size: calc(var(--hero-fontSize) * 0.5);
+}
+@media all and (min-width: 768px) {
+  .hero-text-wrapper {
+    text-align: start;
+    align-items: start;
+  }
 }
 
 .get-started-btn {
-  margin-right: auto !important;
   padding: 0.5rem 1.6rem;
   border-radius: 0.5rem;
   font-size: 1.5rem;
