@@ -784,10 +784,9 @@ main {
 }
 .tenzy-overlay .close-icon svg {
   font-size: var(--toe-fontSize);
-  transition: all 0.3s ease-in-out;
 }
 .tenzy-overlay .close-icon svg:hover {
-  color: #bb2525;
+  color: #fd1d1d;
 }
 .tenzy-overlay .addScore-label {
   display: block;
@@ -1050,28 +1049,15 @@ main {
 .add-img-wrapper input[type=text]::selected {
   outline: none;
 }
-.add-img-wrapper .hamburger-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
+.add-img-wrapper .close-icon {
+  top: 0.3rem;
+  right: 0.3rem;
 }
-.add-img-wrapper .hamburger-icon span {
-  background-image: none;
-  width: 1.6rem;
-  height: 0.3rem;
-  transform-origin: 0.001px 2.5px;
+.add-img-wrapper .close-icon svg {
+  font-size: calc(var(--mm-fontSize) * 2);
 }
-.add-img-wrapper .hamburger-icon span:nth-child(1) {
-  transform: rotate(45deg);
-}
-.add-img-wrapper .hamburger-icon span:nth-child(2) {
-  opacity: 0;
-}
-.add-img-wrapper .hamburger-icon span:nth-child(3) {
-  transform: rotate(-45deg);
-}
-.add-img-wrapper .hamburger-icon:hover span {
-  background-color: #fd1d1d;
+.add-img-wrapper .close-icon svg:hover {
+  color: #fd1d1d;
 }
 
 .add-img-btn, .get-random-mm-btn {
@@ -1524,30 +1510,15 @@ main {
   scale: 0;
   transition: scale 0.5s ease;
 }
-.quiz-saved-specifications .hamburger-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
+.quiz-saved-specifications .close-icon {
   top: 0.5rem;
   right: 0.5rem;
 }
-.quiz-saved-specifications .hamburger-icon span {
-  background-image: none;
-  width: 1.6rem;
-  height: 0.3rem;
-  transform-origin: 0.001px 2.5px;
+.quiz-saved-specifications .close-icon svg {
+  font-size: calc(var(--quiz-fontSize) * 0.7);
 }
-.quiz-saved-specifications .hamburger-icon span:nth-child(1) {
-  transform: rotate(45deg);
-}
-.quiz-saved-specifications .hamburger-icon span:nth-child(2) {
-  opacity: 0;
-}
-.quiz-saved-specifications .hamburger-icon span:nth-child(3) {
-  transform: rotate(-45deg);
-}
-.quiz-saved-specifications .hamburger-icon:hover span {
-  background-color: #fd1d1d;
+.quiz-saved-specifications .close-icon svg:hover {
+  color: #fd1d1d;
 }
 .quiz-saved-specifications h2 {
   font-size: calc(var(--quiz-fontSize) * 0.8);

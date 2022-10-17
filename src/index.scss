@@ -96,34 +96,6 @@ $break-points: (
     background-position: center;
 }
 
-@mixin close-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    
-    span{
-        background-image: none;
-        width: 1.6rem;
-        height: .3rem;
-        transform-origin: .001px 2.5px;
-    }
-    
-    span:nth-child(1){
-        transform: rotate(45deg);
-    }
-    span:nth-child(2){
-        opacity: 0;
-    }
-    span:nth-child(3){
-        transform: rotate(-45deg);
-    }
-    
-    &:hover{
-        span{
-            background-color: $meme-clr-3;
-        }
-    }
-}
 
 :root{
     --hero-fontSize: 2.5rem;
@@ -938,10 +910,9 @@ main{
 
         svg{
             font-size: var(--toe-fontSize);
-            transition: $main-transition;
 
             &:hover{
-                color: $clr-dark-red;
+                color: $meme-clr-3;
             }    
         }
     }
@@ -1242,8 +1213,17 @@ main{
         }
     }
 
-    .hamburger-icon{
-        @include close-overlay;
+    .close-icon{
+        top: .3rem;
+        right: .3rem;
+
+        svg{
+            font-size: calc(var(--mm-fontSize) * 2);
+
+            &:hover{
+                color: $meme-clr-3;
+            }
+        }
     } 
 }
 
@@ -1763,11 +1743,17 @@ main{
     scale: 0;
     transition: scale 0.5s ease;
 
-    .hamburger-icon{
-        @include close-overlay;
-
+    .close-icon{
         top: .5rem;
         right: .5rem;
+
+        svg{
+            font-size: calc(var(--quiz-fontSize) * .7);
+
+            &:hover{
+                color: $meme-clr-3;
+            }
+        }
     }
 
     h2{
