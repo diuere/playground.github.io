@@ -1,7 +1,8 @@
 import React from "react";
 import Score from "./Score";
-import CloseGameInfo from "./CloseGameInfo";
+import CloseGameInfo from "../CloseGameInfo";
 import RoundInfo from "./RoundInfo";
+import { closeTenzyGameInfo } from '../../store/functions';
 
 export default function Overlay(){
     const [bestScore, setBestScore] = React.useState(
@@ -24,7 +25,7 @@ export default function Overlay(){
     return (
         <div className="tenzy-overlay main-overlay-style">
             <div className="info-wrapper" id="gameInfoWrapper">
-                <CloseGameInfo />
+                <CloseGameInfo closeTenzyGameInfo={closeTenzyGameInfo}/>
                 <RoundInfo score={{bestScore, setBestScore}} />
                 <div className="best-score-wrapper">
                     {best}

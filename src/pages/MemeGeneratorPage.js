@@ -6,7 +6,7 @@ import { useMemeGeneratorStore } from '../store/store';
 
 import MemeTextContent from '../components/memeGeneratorComponents/MemeTextContent';
 import MemeTextTemplate from '../components/memeGeneratorComponents/MemeTextTemplate';
-import HamburgerIcon from '../components/HamburgerIcon';
+import CloseGameInfo from '../components/CloseGameInfo';
 
 
 import { getMemeImageUrl, getMemeTemplate, insertImage, toggleAddMeme, toggleConfig, uploadImage } from '../store/functions'; // function for the template used
@@ -72,7 +72,7 @@ export default function MemeGeneratorPage() {
                 </div>
                 <div className="mm-overlay main-overlay-style">
                         <div className="add-img-wrapper">
-                            <HamburgerIcon toggleAddMeme={toggleAddMeme}/>
+                            <CloseGameInfo toggleAddMeme={toggleAddMeme}/>
                             <button className="paste-img ">
                                 Choose file
                                 <input type="file" name="" id="" accept="image/*" onChange={(e) => insertImage(null, e.target.files[0], setImageFile)}/>

@@ -593,7 +593,14 @@ main{
     }
 }
 
+.close-icon{
+    position: absolute;
+    cursor: pointer;
 
+    svg{
+        transition: $main-transition;  
+    }
+}
 
 .desktop-links-wrapper{
     display: none;
@@ -926,27 +933,17 @@ main{
 
     /* game info close icon */
     .close-icon{
-        position: absolute;
         top: .9rem;
         right: .8rem;
-        cursor: pointer;
-    }
-    .close-icon span{
-        transform-origin: .3965rem .14565rem;
-    }
-    .close-icon .left{
-        display: block;
-        background-color: $clr-dark-1;
-        width: 1.2rem;
-        height: .3rem;
-        transform: rotate(45deg);
-    }
-    .close-icon .right{
-        display: block;
-        background-color: $clr-dark-1;
-        width: 1.2rem;
-        height: .3rem;
-        transform: rotate(-45deg);
+
+        svg{
+            font-size: var(--toe-fontSize);
+            transition: $main-transition;
+
+            &:hover{
+                color: $clr-dark-red;
+            }    
+        }
     }
 
 

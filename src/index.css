@@ -452,6 +452,14 @@ main {
     opacity: 0;
   }
 }
+.close-icon {
+  position: absolute;
+  cursor: pointer;
+}
+.close-icon svg {
+  transition: all 0.3s ease-in-out;
+}
+
 .desktop-links-wrapper {
   display: none;
   width: 100%;
@@ -771,27 +779,15 @@ main {
   font-weight: 700;
 }
 .tenzy-overlay .close-icon {
-  position: absolute;
   top: 0.9rem;
   right: 0.8rem;
-  cursor: pointer;
 }
-.tenzy-overlay .close-icon span {
-  transform-origin: 0.3965rem 0.14565rem;
+.tenzy-overlay .close-icon svg {
+  font-size: var(--toe-fontSize);
+  transition: all 0.3s ease-in-out;
 }
-.tenzy-overlay .close-icon .left {
-  display: block;
-  background-color: #1F1C18;
-  width: 1.2rem;
-  height: 0.3rem;
-  transform: rotate(45deg);
-}
-.tenzy-overlay .close-icon .right {
-  display: block;
-  background-color: #1F1C18;
-  width: 1.2rem;
-  height: 0.3rem;
-  transform: rotate(-45deg);
+.tenzy-overlay .close-icon svg:hover {
+  color: #bb2525;
 }
 .tenzy-overlay .addScore-label {
   display: block;

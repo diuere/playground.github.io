@@ -46,7 +46,7 @@ export const addSelected = (e) => { // handles the link selected action once the
 // the following functions are related to the tenzy component
 
 // function to remove the tenzy game information
-export const  closeGameInfo = () => {
+export const  closeTenzyGameInfo = () => {
     const gameInfoWrapper = document.querySelector("#gameInfoWrapper");
     const tenzyOverlay = document.querySelector(".tenzy-overlay");
     
@@ -55,7 +55,7 @@ export const  closeGameInfo = () => {
 }
 
 // function to open the tenzy game information
-export const openGameInfo = () => {
+export const openTenzyGameInfo = () => {
     const gameInfoWrapper = document.querySelector("#gameInfoWrapper");
     const tenzyOverlay = document.querySelector(".tenzy-overlay");
     

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useQuizGamePlayersStore } from '../../store/store';
 import QuizDiff from './QuizDiff';
 import QuizTime from './QuizTime';
-import HamburgerIcon from "../HamburgerIcon";
+import CloseGameInfo from "../CloseGameInfo";
 import { toggleQuizOverLay } from '../../store/functions';
 
 export default function QuizSpecs() {
@@ -34,7 +34,7 @@ export default function QuizSpecs() {
 
   return (
     <div className="quiz-saved-specifications">
-        <HamburgerIcon toggleQuizOverLay={toggleQuizOverLay} />
+        <CloseGameInfo toggleQuizOverLay={toggleQuizOverLay}/>
         <h2>Best Players</h2>
         <div className="quiz-best-players-wrapper">
             {bestPlayers.length > 0?

@@ -1,11 +1,8 @@
 import React from 'react';
 
-export default function HamburgerIcon({ toggleMenu, toggleAddMeme, toggleTicTacGameStatus, toggleQuizOverLay }) {
+export default function HamburgerIcon({ toggleMenu }) {
   const handleClick = () => {
     if(toggleMenu) toggleMenu();
-    if(toggleAddMeme) toggleAddMeme();
-    if(toggleTicTacGameStatus) toggleTicTacGameStatus();
-    if(toggleQuizOverLay) toggleQuizOverLay();
   }
 
   return (
