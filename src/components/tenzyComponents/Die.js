@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function Die(props){
+export default function Die({ selected, handleClick, id, number }){
     return (
-        <div className="die" onClick={(e) => props.handleClick(e, props.id)} style={props.style}>{props.number}</div>
+        <div className={`die ${selected}`} onClick={(e) => handleClick(e, id)}>{number}</div>
     )
 }

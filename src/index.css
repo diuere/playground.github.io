@@ -344,7 +344,7 @@ main {
   letter-spacing: 0.1rem;
 }
 .menu-overlay .navbar-links-wrapper .route-selector {
-  color: #e9eaeb;
+  color: #eaebec;
 }
 .menu-overlay .navbar-links-wrapper .route-selector:hover {
   color: #fea1a1;
@@ -377,7 +377,7 @@ main {
   background-image: radial-gradient(circle 40rem at 50% 150%, #3d3d3d 0%, #1F1C18 140%);
 }
 .menu-overlay .navbar-links-wrapper .contact-btn:hover {
-  color: #e9eaeb;
+  color: #eaebec;
 }
 
 .menu-toggled .hamburger-icon span:nth-child(1) {
@@ -673,30 +673,6 @@ main {
   box-shadow: 0.2rem 0.2rem 0.5rem 0.2rem #1F1C18;
   -webkit-animation: pop-up 0.3s linear forwards;
           animation: pop-up 0.3s linear forwards;
-  /* dice content */
-}
-.tenzy-body .dice-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0.5rem, 5rem));
-  grid-gap: 1.2rem;
-  justify-content: center;
-  justify-items: center;
-  margin: 2rem 0 3rem 0;
-  width: 100%;
-}
-.tenzy-body .die {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.4rem;
-  background-color: #F5F5F5;
-  width: 3.2rem;
-  height: 3rem;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-  color: #1F1C18;
-  font-size: 1.5rem;
-  font-weight: 700;
-  cursor: pointer;
 }
 .tenzy-body .game-info {
   align-self: center;
@@ -706,14 +682,45 @@ main {
   cursor: pointer;
 }
 
+/* dice content */
+.dice-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0.5rem, 5rem));
+  grid-gap: 1.2rem;
+  justify-content: center;
+  justify-items: center;
+  margin: 2rem 0 3rem 0;
+  width: 100%;
+}
+
+.die {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4rem;
+  background-color: rgba(245, 245, 245, 0.85);
+  width: 3.2rem;
+  height: 3rem;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  color: #1F1C18;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.die-selected {
+  background-color: rgb(49, 208, 118);
+  color: rgba(245, 245, 245, 0.85);
+}
+
 .tenzy-title {
-  color: #e9eaeb;
+  color: #eaebec;
   letter-spacing: 0.1rem;
 }
 
 .tenzy-p {
   margin: 1rem 0 0;
-  color: #e9eaeb;
+  color: #eaebec;
   text-align: center;
   font-weight: 600;
   letter-spacing: 0.1rem;
@@ -723,10 +730,10 @@ main {
   padding: 0.6rem 1.2rem;
   border: 0;
   border-radius: 0.5rem;
-  background-color: #e9eaeb;
+  background-color: rgba(245, 245, 245, 0.85);
   color: #1F1C18;
   font-weight: 600;
-  text-shadow: 0.1rem 0.1rem 0.2rem #F5F5F5;
+  text-shadow: 0.1rem 0.1rem 0.2rem rgb(245, 245, 245);
   font-size: 1.1rem;
   letter-spacing: 0.1rem;
   transition: all 0.3s ease-in-out;
@@ -734,7 +741,7 @@ main {
 }
 
 .tenzy-btn:hover {
-  background: #F5F5F5;
+  background: rgb(245, 245, 245);
 }
 
 .tenzy-reset-btn {
@@ -760,7 +767,7 @@ main {
   position: relative;
   padding: 0.5rem 1.5rem;
   border-radius: 0.5rem;
-  background: #F5F5F5;
+  background: rgb(245, 245, 245);
   max-width: 24rem;
   width: 60%;
   scale: 0;
@@ -1067,7 +1074,7 @@ main {
   font-size: calc(var(--mm-fontSize));
   background-color: #bb2525;
   background-image: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
-  color: #e9eaeb;
+  color: #eaebec;
 }
 .add-img-btn:hover, .get-random-mm-btn:hover {
   background-color: #3d3d3d;
@@ -1137,7 +1144,7 @@ main {
   background-color: #393535;
   width: min(100%, 17rem);
   font-size: 1.2rem;
-  color: #e9eaeb;
+  color: #eaebec;
   scale: 0.1;
   transition: all 0.3s ease-in-out;
   opacity: 0;
@@ -1152,7 +1159,7 @@ main {
   padding: 0.3rem 0.6rem;
   border: 0.2rem solid #9518fc;
   border-radius: 0.3rem;
-  color: #e9eaeb;
+  color: #eaebec;
   background-color: inherit;
 }
 .font-config-wrapper .reset-config-btn:hover {
@@ -1191,7 +1198,7 @@ main {
   background-color: #c13333;
   width: 1rem;
   border-radius: 50%;
-  color: #e9eaeb;
+  color: #eaebec;
   font-size: 1.1rem;
   box-shadow: 0.1rem 0.1rem 0.2rem 0.05rem #3d3d3d;
   cursor: pointer;
@@ -1213,7 +1220,7 @@ main {
   background-color: #fc00ff;
   background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
   font-size: calc(var(--mm-fontSize));
-  color: #e9eaeb;
+  color: #eaebec;
 }
 .create-template:hover::after, .reset-templates:hover::after {
   background-color: #bb2525;
@@ -1227,7 +1234,7 @@ main {
   border-radius: 0.3rem;
   width: 100%;
   background-color: #3d3d3d;
-  color: #e9eaeb;
+  color: #eaebec;
 }
 .download-mmImg-btn:hover {
   background-color: #393535;
@@ -1249,7 +1256,7 @@ main {
   padding: calc(var(--toe-grid-size) * 0.4);
   border-radius: 0.3rem;
   background-color: #A36846;
-  color: #e9eaeb;
+  color: #eaebec;
   box-shadow: 0.2rem 0.2rem 0.5rem 0.2rem #1F1C18;
   -webkit-animation: pop-up 0.3s linear forwards;
           animation: pop-up 0.3s linear forwards;
@@ -1302,7 +1309,7 @@ main {
   flex-direction: column;
   background-color: rgba(16, 42, 66, 0.9);
   transition: all 0.3s ease-in-out;
-  color: #e9eaeb;
+  color: #eaebec;
 }
 .tic-tac-overlay h2 {
   font-size: calc(var(--toe-fontSize) * 2);
@@ -1324,7 +1331,7 @@ main {
 }
 .tic-tac-overlay button:hover {
   background-color: rgba(163, 104, 70, 0.8);
-  color: #e9eaeb;
+  color: #eaebec;
 }
 
 .toggle-tic-tac-overlay {
@@ -1345,7 +1352,7 @@ main {
 }
 .reset-tic-tac-game:hover {
   background-color: rgba(16, 42, 66, 0.8);
-  color: #e9eaeb;
+  color: #eaebec;
 }
 
 .quiz-wrapper-main-style {
@@ -1565,7 +1572,7 @@ main {
   margin: calc(var(--quiz-main-gap) * 0.4) 0 calc(var(--quiz-main-gap) * 0.8);
   padding: var(--quiz-main-gap);
   border-radius: 0.5rem;
-  background-color: #F5F5F5;
+  background-color: rgb(245, 245, 245);
   box-shadow: 0.2rem 0.2rem 0.4rem #1F1C18;
 }
 
@@ -1796,7 +1803,7 @@ main {
   transition: all 0.3s ease-in-out;
 }
 .contact-form .contact-btn span {
-  color: #e9eaeb;
+  color: #eaebec;
 }
 .contact-form .contact-btn::after {
   background-color: #1F1C18;
@@ -1834,7 +1841,7 @@ main {
   padding: 1rem 0 1.5rem;
   background-color: #1F1C18;
   background-image: radial-gradient(circle 40rem at 50% 150%, #3d3d3d 0%, #1F1C18 140%);
-  color: #e9eaeb;
+  color: #eaebec;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1870,7 +1877,7 @@ main {
   transform: scale(1.2);
 }
 .main-footer .sm-contact-wrapper a {
-  color: #e9eaeb;
+  color: #eaebec;
   transition: all 0.3s ease-in-out;
   cursor: unset;
 }

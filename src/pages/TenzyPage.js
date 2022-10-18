@@ -30,21 +30,21 @@ export default function TenzyPage(){
     
     let isDone = dice.every(item => item.isHeld);// variable that assists on determining the content of the button
 
-    // re-assigning value to the dice's items after a roll event ocurrs
+    // re-assigning value to the dice's items after a roll event occurs
     React.useMemo(() => {
         setDice(prevState => prevState.map(item => item.isHeld ? { ...item, value: hold } : { ...item, value: Math.ceil(Math.random() * 6) }))
     }, [roll]);
 
     // rendering dice's elements
-    const diceElem = dice.map(item => <Die key={item.id} id={item.id} classNm={item.classNm} number={item.value} handleClick={selectDie} style={item.isHeld ? { backgroundColor: "rgb(49, 208, 118)", color: "#F5F5F5"} : {backgroudColor: 'white'}} />);
+    const diceElem = dice.map(item => <Die key={item.id} id={item.id} classNm={item.classNm} number={item.value} handleClick={selectDie} selected={item.isHeld ? "die-selected" : ""} />);
     
-    // this function will applied once a die gets clicked
+    // this function will be trigged once a die gets clicked
     function selectDie(e, id){
         const { innerHTML } = e.target;
 
         if(hold.length < 1 || hold === innerHTML){
             setHold(innerHTML)
-            setDice(prevState => prevState.map(item => item.id === id ? { value: innerHTML, id: id, isHeld: !item.isHeld} : item));
+            setDice(prevState => prevState.map(item => item.id === id ? { value: innerHTML, id: id, isHeld: true} : item));
         }
     }
 
