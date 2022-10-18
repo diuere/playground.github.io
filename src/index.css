@@ -2,6 +2,10 @@
 :root {
   --hero-fontSize: 2.5rem;
   --hero-main-gap: 1.5rem;
+  --tenzy-fontSize: 1rem;
+  --tenzy-wrapperWidth: 20rem;
+  --tenzy-wrapperHeight: 20rem;
+  --tenzy-main-gap: .8rem;
   --toe-fontSize: 1.5rem;
   --toe-grid-size: 4rem;
   --quiz-fontSize: 2rem;
@@ -19,6 +23,10 @@
   :root {
     --hero-fontSize: 2rem;
     --hero-main-gap: 1rem;
+    --tenzy-fontSize: .75rem;
+    --tenzy-wrapperWidth: 15rem;
+    --tenzy-wrapperHeight: 15rem;
+    --tenzy-main-gap: .6rem;
     --toe-fontSize: 1.25rem;
     --toe-grid-size: 3rem;
     --mm-fontSize: .8rem;
@@ -35,6 +43,10 @@
   :root {
     --hero-fontSize: 3rem;
     --hero-main-gap: 1.75rem;
+    --tenzy-fontSize: 1.25rem;
+    --tenzy-wrapperWidth: 25rem;
+    --tenzy-wrapperHeight: 25rem;
+    --tenzy-main-gap: 1rem;
     --toe-fontSize: 2rem;
     --toe-grid-size: 6rem;
     --quiz-fontSize: 2.5rem;
@@ -53,6 +65,10 @@
   :root {
     --hero-fontSize: 3.25rem;
     --hero-main-gap: 2rem;
+    --tenzy-fontSize: 1.5rem;
+    --tenzy-wrapperWidth: 30rem;
+    --tenzy-wrapperHeight: 30rem;
+    --tenzy-main-gap: 1.25rem;
     --toe-fontSize: 2.5rem;
     --toe-grid-size: 8rem;
     --quiz-fontSize: 3rem;
@@ -659,7 +675,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
 .tenzy-body {
@@ -669,7 +684,7 @@ main {
   padding: 1.2rem;
   border-radius: 0.4rem;
   background-color: rgb(5, 96, 124);
-  max-width: 30rem;
+  max-width: var(--tenzy-wrapperWidth);
   box-shadow: 0.2rem 0.2rem 0.5rem 0.2rem #1F1C18;
   -webkit-animation: pop-up 0.3s linear forwards;
           animation: pop-up 0.3s linear forwards;
@@ -677,19 +692,19 @@ main {
 .tenzy-body .game-info {
   align-self: center;
   border-radius: 1.2rem;
-  width: 2rem;
-  height: 2rem;
+  width: calc(var(--tenzy-wrapperWidth) * 0.08);
+  height: calc(var(--tenzy-wrapperHeight) * 0.08);
   cursor: pointer;
 }
 
 /* dice content */
 .dice-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0.5rem, 5rem));
-  grid-gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(calc(var(--tenzy-main-gap) * 0.5), calc(var(--tenzy-main-gap) * 4)));
+  grid-gap: calc(var(--tenzy-main-gap));
   justify-content: center;
   justify-items: center;
-  margin: 2rem 0 3rem 0;
+  margin: calc(var(--tenzy-main-gap) * 1.75) 0 calc(var(--tenzy-main-gap) * 2.25) 0;
   width: 100%;
 }
 
@@ -699,11 +714,11 @@ main {
   align-items: center;
   border-radius: 0.4rem;
   background-color: rgba(245, 245, 245, 0.85);
-  width: 3.2rem;
-  height: 3rem;
+  width: calc(var(--tenzy-wrapperWidth) * 0.1);
+  height: calc(var(--tenzy-wrapperHeight) * 0.1);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
   color: #1F1C18;
-  font-size: 1.5rem;
+  font-size: var(--tenzy-fontSize);
   font-weight: 700;
   cursor: pointer;
 }
@@ -714,27 +729,29 @@ main {
 }
 
 .tenzy-title {
+  font-size: calc(var(--tenzy-fontSize) * 1.5);
   color: #eaebec;
   letter-spacing: 0.1rem;
 }
 
 .tenzy-p {
-  margin: 1rem 0 0;
-  color: #eaebec;
+  margin: calc(var(--tenzy-main-gap) * 0.5) 0 0;
   text-align: center;
+  font-size: calc(var(--tenzy-fontSize) * 0.8);
   font-weight: 600;
+  color: #eaebec;
   letter-spacing: 0.1rem;
 }
 
 .tenzy-btn {
-  padding: 0.6rem 1.2rem;
+  padding: calc(var(--tenzy-main-gap) * 0.5) calc(var(--tenzy-main-gap) * 1.2);
   border: 0;
   border-radius: 0.5rem;
   background-color: rgba(245, 245, 245, 0.85);
-  color: #1F1C18;
   font-weight: 600;
   text-shadow: 0.1rem 0.1rem 0.2rem rgb(245, 245, 245);
-  font-size: 1.1rem;
+  font-size: calc(var(--tenzy-fontSize) * 0.8);
+  color: #1F1C18;
   letter-spacing: 0.1rem;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -765,25 +782,29 @@ main {
 }
 .tenzy-overlay .info-wrapper {
   position: relative;
-  padding: 0.5rem 1.5rem;
+  padding: calc(var(--tenzy-main-gap) * 0.25) calc(var(--tenzy-main-gap) * 1.25);
   border-radius: 0.5rem;
   background: rgb(245, 245, 245);
-  max-width: 24rem;
+  max-width: calc(var(--tenzy-wrapperWidth) * 0.75);
   width: 60%;
   scale: 0;
   transition: scale 0.5s ease;
 }
 .tenzy-overlay .round-info {
   display: grid;
-  gap: 0.5rem;
-  margin: 1rem 0;
+  gap: calc(var(--tenzy-main-gap) * 0.5);
+  margin: calc(var(--tenzy-main-gap)) 0;
 }
 .tenzy-overlay .info-title {
-  padding: 0.5rem 0;
+  padding: calc(var(--tenzy-main-gap) * 0.5) 0;
   text-align: center;
+  font-size: calc(var(--tenzy-fontSize) * 1.1);
 }
 .tenzy-overlay .bold {
   font-weight: 700;
+}
+.tenzy-overlay .info-rolls, .tenzy-overlay .info-time {
+  font-size: calc(var(--tenzy-fontSize) * 0.9);
 }
 .tenzy-overlay .close-icon {
   top: 0.9rem;
@@ -797,15 +818,15 @@ main {
 }
 .tenzy-overlay .addScore-label {
   display: block;
-  margin: 0.5rem 0;
+  margin: calc(var(--tenzy-main-gap) * 0.5) 0;
   width: 100%;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: calc(var(--tenzy-fontSize) * 0.8);
   font-weight: bold;
 }
 .tenzy-overlay .add-score-btn {
-  margin-left: 0.5rem;
-  padding: 0.2rem 0.5rem;
+  margin-left: calc(var(--tenzy-main-gap) * 0.5);
+  padding: calc(var(--tenzy-main-gap) * 0.35) calc(var(--tenzy-main-gap) * 0.7);
   border: 0.001rem solid #1F1C18;
   border-radius: 0.1rem;
   font-weight: 600;
@@ -813,8 +834,8 @@ main {
   cursor: pointer;
 }
 .tenzy-overlay .best-score-wrapper {
-  margin: 1rem auto;
-  padding: 0.8rem 1rem;
+  margin: calc(var(--tenzy-main-gap)) auto;
+  padding: calc(var(--tenzy-main-gap) * 0.75) calc(var(--tenzy-main-gap) * 1.25);
   border-radius: 0.5rem;
   background-color: rgb(218, 218, 218);
   width: 100%;
@@ -826,12 +847,12 @@ main {
   align-items: center;
 }
 .tenzy-overlay .best-score-content-wrapper:not(:first-child) {
-  font-size: 0.8rem;
-  margin-top: 0.3rem;
+  font-size: calc(var(--tenzy-fontSize) * 0.8);
+  margin-top: calc(var(--tenzy-main-gap) * 0.5);
   margin-left: 0.05rem;
 }
 .tenzy-overlay .best-score-content-wrapper:first-child .best-score {
-  font-size: 0.9rem;
+  font-size: calc(var(--tenzy-fontSize) * 0.9);
   color: rgb(2, 179, 102);
 }
 .tenzy-overlay .best-score span {
@@ -839,12 +860,11 @@ main {
 }
 .tenzy-overlay .delete-fav-score {
   margin-left: 0.2rem;
+  padding: calc(var(--tenzy-main-gap) * 0.025) calc(var(--tenzy-main-gap) * 0.5);
   border: 0.001rem solid #1F1C18;
   border-radius: 0.2rem;
-  width: 1.5rem;
-  font-size: 1.2rem;
+  font-size: calc(var(--tenzy-fontSize));
   font-weight: 700;
-  transform: scale(0.8);
   cursor: pointer;
 }
 
