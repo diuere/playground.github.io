@@ -669,12 +669,12 @@ main {
 .tenzyGame-page {
   position: relative;
   background-color: #f6eded;
-  min-height: 60rem;
+  height: auto;
 }
 .tenzyGame-page .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
 }
 
 .tenzy-body {
@@ -878,12 +878,14 @@ main {
 }
 
 .memeGenerator-page {
+  position: relative;
+  background-color: #f6eded;
+  height: auto;
+}
+.memeGenerator-page .container {
   display: grid;
   place-content: center;
-  position: relative;
   min-height: 100vh;
-  height: auto;
-  background-color: #f6eded;
 }
 @media all and (min-width: 1078px) {
   .memeGenerator-page .container {
@@ -1263,10 +1265,12 @@ main {
 .ticTacToe-page {
   position: relative;
   background-color: #f6eded;
+  height: auto;
 }
 .ticTacToe-page .container {
   display: flex;
   justify-content: center;
+  min-height: 100vh;
 }
 
 .ticTacToe-body-wrapper {
@@ -1423,10 +1427,12 @@ main {
 .quizGame-page {
   position: relative;
   background-color: #f6eded;
+  height: auto;
 }
 .quizGame-page .container {
   display: grid;
   place-content: center;
+  min-height: 100vh;
 }
 
 .start-quiz-wrapper {
@@ -1701,10 +1707,12 @@ main {
 .contactPage {
   position: relative;
   background-color: #f6eded;
+  height: auto;
 }
 .contactPage .container {
   display: grid;
   place-content: center;
+  min-height: 100vh;
 }
 @media all and (min-width: 778px) {
   .contactPage .container {

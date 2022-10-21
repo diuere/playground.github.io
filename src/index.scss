@@ -798,12 +798,12 @@ main{
 .tenzyGame-page{
     position: relative;
     background-color: $main-backgroundColor;
-    min-height: 60rem;
+    height: auto;
 
     .container{
-        display: flex; 
-        justify-content: center;
-        align-items: center;
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
     }
 }
 
@@ -1028,14 +1028,15 @@ main{
 
 
 .memeGenerator-page{
-    display: grid;
-    place-content: center;
     position: relative;
-    min-height: 100vh;
-    height: auto;
     background-color: $main-backgroundColor;
-
+    height: auto;
+    
     .container{
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+        
         @include la{
             padding: 5em;
         }
@@ -1475,13 +1476,15 @@ main{
 
 
 
-.ticTacToe-page{
+.ticTacToe-page{    
     position: relative;
     background-color: $main-backgroundColor;
+    height: auto;
 
     .container{
         display: flex;
         justify-content: center;
+        min-height: 100vh;
     }
 }
 .ticTacToe-body-wrapper{
@@ -1642,10 +1645,12 @@ main{
 .quizGame-page{
     position: relative;
     background-color: $main-backgroundColor;
+    height: auto;
 
     .container{
         display: grid;
         place-content: center;
+        min-height: 100vh;
     }
 }
 
@@ -1966,10 +1971,12 @@ main{
 .contactPage{
     position: relative;
     background-color: $main-backgroundColor;
+    height: auto;
 
     .container{
         display: grid;
         place-content: center;
+        min-height: 100vh;
 
         @include md{
             display: flex;
