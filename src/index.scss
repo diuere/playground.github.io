@@ -1803,7 +1803,7 @@ main{
     .quiz-main-btn-style{
         display: none;
         padding: calc(var(--quiz-fontSize) * .2) calc(var(--quiz-fontSize) * .4);
-        border-radius: 1rem;
+        border-radius: .5rem;
         font-size: calc(var(--quiz-fontSize) * .35);
     }
 
@@ -2047,7 +2047,7 @@ main{
     display: grid;
     gap: var(--contact-main-gap);
     padding: var(--contact-main-gap);
-    border-radius: 1rem;
+    border-radius: .5rem;
     background-color: $clr-bright-red;
     background-image: $clr-background-gradient-3;
     box-shadow: 0 0 1rem $clr-dark-1;
@@ -2065,7 +2065,7 @@ main{
 
     input, textarea{
         padding: calc(var(--contact-main-gap) * .3) calc(var(--contact-main-gap) * .6);
-        border-radius: 1rem;
+        border-radius: .5rem;
         width: 100%;
         font-size: calc(var(--contact-fontSize) * .6);
     }
@@ -2075,7 +2075,7 @@ main{
         margin: auto;
         padding: calc(var(--contact-main-gap) * .3) calc(var(--contact-main-gap) * .6);
         border: none;
-        border-radius: 1rem;
+        border-radius: .5rem;
         background-color: transparent;
         background-image: none;
         width: 100%;

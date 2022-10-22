@@ -1560,7 +1560,7 @@ main {
 .quiz-saved-specifications .quiz-main-btn-style {
   display: none;
   padding: calc(var(--quiz-fontSize) * 0.2) calc(var(--quiz-fontSize) * 0.4);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   font-size: calc(var(--quiz-fontSize) * 0.35);
 }
 .quiz-saved-specifications .quiz-difficulty-wrapper {
@@ -1790,7 +1790,7 @@ main {
   display: grid;
   gap: var(--contact-main-gap);
   padding: var(--contact-main-gap);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   background-color: #fea1a1;
   background-image: radial-gradient(circle 60rem at 50% 0%, #fea1a1 -40%, #bb2525 140%);
   box-shadow: 0 0 1rem #1F1C18;
@@ -1812,7 +1812,7 @@ main {
 }
 .contact-form input, .contact-form textarea {
   padding: calc(var(--contact-main-gap) * 0.3) calc(var(--contact-main-gap) * 0.6);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   width: 100%;
   font-size: calc(var(--contact-fontSize) * 0.6);
 }
@@ -1821,7 +1821,7 @@ main {
   margin: auto;
   padding: calc(var(--contact-main-gap) * 0.3) calc(var(--contact-main-gap) * 0.6);
   border: none;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   background-color: transparent;
   background-image: none;
   width: 100%;
