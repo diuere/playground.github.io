@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 // zustand
 import shallow from "zustand/shallow";
@@ -59,7 +59,7 @@ export default function MemeGeneratorPage() {
         <div className="container">
             <div className="mm-generator-wrapper">
                 <div className="mm-img-wrapper">
-                    <img src={memeImage} alt="meme image" draggable="false"/>
+                    <img src={memeImage} alt="meme" draggable="false"/>
                     {textOnImage}
                 </div>
                 <div className="generate-mm-wrapper">

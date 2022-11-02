@@ -392,6 +392,9 @@ html{
     }
     &::-webkit-scrollbar-thumb{
         background-color: $clr-grey-1;
+        &:hover{
+            background-color: $clr-grey-1-5;
+        }
     }
     &::-webkit-scrollbar-track{
         background-color: $clr-grey-2;
@@ -2068,6 +2071,7 @@ main{
         border-radius: .5rem;
         width: 100%;
         font-size: calc(var(--contact-fontSize) * .6);
+        resize: none;
     }
 
     .contact-btn{

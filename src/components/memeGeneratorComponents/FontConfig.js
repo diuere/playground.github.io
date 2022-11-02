@@ -44,17 +44,6 @@ export default function FontConfig( props ) {
                 <em>Italic</em> <input type="checkbox" name="fontStyle" value={checked("italic", currentTemplate.fontStyle) ? "" : "italic"} id="italicFc" checked={checked("italic", currentTemplate.fontStyle)} onChange={(e) => handleChange(e)}/> 
             </label>
         </div>
-        {/* <div className="font-config-op outline-config">
-            <label htmlFor="shadowLineFc">
-                Shadow <input type="radio" name={`outline#${id}`} value={`shadow#${id}`} id="shadowLineFc" checked={checked(`shadow#${id}`, currentTemplate[`outline#${id}`])} onChange={(e) => handleChange(e)}/> 
-            </label>
-            <label htmlFor="outlineFc">
-                Outline <input type="radio" name={`outline#${id}`} value={`outline#${id}`} id="outlineFc" checked={checked(`outline#${id}`, currentTemplate[`outline#${id}`])} onChange={(e) => handleChange(e)}/> 
-            </label>
-            <label htmlFor="noneFc">
-                None <input type="radio" name={`outline#${id}`} value={`none#${id}`} id="noneFc" checked={checked(`none#${id}`, currentTemplate[`outline#${id}`])} onChange={(e) => handleChange(e)}/>
-            </label>
-        </div> */}
         <div className="font-config-op outline-width-config">
             <label htmlFor="outlineWidthFc">Outline Width</label>
             <input type="number" name="outlineWidth" value={currentTemplate.outlineWidth} id="outlineWidthFc" min="0" max="9" onChange={(e) => handleChange(e)}/> 
