@@ -84,13 +84,25 @@ export const getMemeTemplate = (id) => ( // shall be used as the data blueprint 
         textTransform: "ALL CAPS",
         fontWeight: "",
         fontStyle: "",
-        [`outline#${id}`]: `shadow#${id}`,
         outlineWidth: "5",
         fontSize: "16",
         lineHeight: "2",
         opacity: "1"
     }
 );
+
+export const handleDeleteTemplate = (storeTemplates, id) => {
+    const storeRemovedTemplate = storeTemplates.filter(tem => tem.id !== id);
+    
+    const newStore = storeRemovedTemplate.map((item, index) => {
+        return {
+            ...item,
+            id: `${index}`,
+        }
+    })
+    
+    return newStore
+}
 
 export const getMemeImageUrl = async (memeURL) => { // handles the fetch request from the get meme API
     const response = await fetch(`${memeURL}`);

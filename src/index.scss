@@ -375,7 +375,6 @@ header{
 body{
     position: relative;
     font-family: 'Kanit', sans-serif;
-    // font-family: 'Lora', serif;
 }
 
 a{
@@ -1039,10 +1038,6 @@ main{
         display: grid;
         place-content: center;
         min-height: 100vh;
-        
-        @include la{
-            padding: 5em;
-        }
     }
 }
 

@@ -44,8 +44,7 @@ export default function MemeTextTemplate( { id, text } ) {
             <div className="settings-icon" onClick={() => toggleConfig(id)}><AiFillSetting /></div>
             <FontConfig id={id} handleChange={handleChange}/>
         </div>
-        {id > 1 && <div className="deleteTemplate-icon" onClick={() => deleteTemplate(id)}>-</div>}
+        {id >= 1 && <div className="deleteTemplate-icon" onClick={() => deleteTemplate(id)}>-</div>}
     </div>
-
   )
 }

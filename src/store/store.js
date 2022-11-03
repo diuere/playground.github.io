@@ -1,6 +1,6 @@
 import create from "zustand";
 import { persist } from "zustand/middleware"
-import { getMemeTemplate } from "./functions"; // function that hold the data for each template of useMemeGeneratorStore
+import { getMemeTemplate, handleDeleteTemplate } from "./functions"; // function that hold the data for each template of useMemeGeneratorStore
 
 export const useTenzyStore = create((set) => (
     {
@@ -27,7 +27,7 @@ export const useMemeGeneratorStore = create((set) => (
         updateTemplates: (value) => set({ templates: value }),
 
         addTemplate: (value) => set(store => ({ templates: [...store.templates, value], })),
-        deleteTemplate: (id) => set(store => ({ templates: store.templates.filter(tem => tem.id !== id), })),
+        deleteTemplate: (id) => set(store => ({ templates: handleDeleteTemplate(store.templates, id), })),
     }
 ))
 
