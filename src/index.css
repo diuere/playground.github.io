@@ -14,6 +14,7 @@
   --quiz-main-gap: .75rem;
   --mm-fontSize: .9rem;
   --mm-main-gap: .75rem;
+  --mm-wrapperWidth: 20rem;
   --contact-fontSize: 1.5rem;
   --contact-main-gap: 1rem;
   --footer-fontSize: .8rem;
@@ -31,6 +32,7 @@
     --toe-grid-size: 3rem;
     --mm-fontSize: .8rem;
     --mm-main-gap: .5rem;
+    --mm-wrapperWidth: 15rem;
     --quiz-fontSize: 1.5rem;
     --quiz-wrapperWidth: 15rem;
     --quiz-wrapperHeight: 15rem;
@@ -55,6 +57,7 @@
     --quiz-main-gap: 1rem;
     --mm-fontSize: 1rem;
     --mm-main-gap: .9rem;
+    --mm-wrapperWidth: 25rem;
     --contact-fontSize: 1.75rem;
     --contact-main-gap: 1.25rem;
     --footer-fontSize: 1rem;
@@ -77,6 +80,7 @@
     --quiz-main-gap: 1.25rem;
     --mm-fontSize: 1rem;
     --mm-main-gap: 1rem;
+    --mm-wrapperWidth: 30rem;
     --contact-fontSize: 2rem;
     --contact-main-gap: 1.5rem;
     --footer-fontSize: 1rem;
@@ -899,7 +903,7 @@ main {
   padding: calc(var(--mm-main-gap) * 0.8);
   border-radius: 0.3rem;
   background: #9518fc;
-  max-width: 30rem;
+  max-width: var(--mm-wrapperWidth);
   box-shadow: 0.2rem 0.2rem 0.4rem 0.2rem #3d3d3d;
   -webkit-animation: pop-up 0.3s linear forwards;
           animation: pop-up 0.3s linear forwards;

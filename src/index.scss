@@ -120,6 +120,7 @@ $break-points: (
     // mm generator variables
     --mm-fontSize: .9rem;
     --mm-main-gap: .75rem;
+    --mm-wrapperWidth: 20rem;
 
     // contact variables
     --contact-fontSize: 1.5rem;
@@ -146,6 +147,7 @@ $break-points: (
         // mm generator variables
         --mm-fontSize: .8rem;
         --mm-main-gap: .5rem;
+        --mm-wrapperWidth: 15rem;
 
          // quiz game variables
         --quiz-fontSize: 1.5rem;
@@ -177,10 +179,11 @@ $break-points: (
         --quiz-wrapperWidth: 25rem;
         --quiz-wrapperHeight: 25rem;
         --quiz-main-gap: 1rem;
-
+        
         // mm generator variables
         --mm-fontSize: 1rem;
         --mm-main-gap: .9rem;
+        --mm-wrapperWidth: 25rem;
 
         // contact variables
         --contact-fontSize: 1.75rem;
@@ -210,11 +213,12 @@ $break-points: (
         --quiz-wrapperWidth: 30rem;
         --quiz-wrapperHeight: 30rem;
         --quiz-main-gap: 1.25rem;
-
+        
         // mm generator variables
         --mm-fontSize: 1rem;
         --mm-main-gap: 1rem;
-
+        --mm-wrapperWidth: 30rem;
+        
         // contact variables
         --contact-fontSize: 2rem;
         --contact-main-gap: 1.5rem;
@@ -1047,7 +1051,7 @@ main{
     padding: calc(var(--mm-main-gap) * .8);
     border-radius: .3rem;
     background: $meme-clr-1;
-    max-width: 30rem;
+    max-width: var(--mm-wrapperWidth);
     box-shadow: .2rem .2rem .4rem .2rem $clr-dark-2;
     animation: pop-up .3s linear forwards;
 
