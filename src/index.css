@@ -1487,6 +1487,7 @@ main {
   display: grid;
   gap: calc(var(--quiz-main-gap) * 0.5);
   color: rgb(70, 64, 64);
+  list-style-position: inside;
 }
 
 .quiz-bestPlayer-preview {
