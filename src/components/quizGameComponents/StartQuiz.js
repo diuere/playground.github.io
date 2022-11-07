@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import shallow from 'zustand/shallow';
 
 import { useQuizGamePlayersStore, useQuizGamePlayerStore, useQuizGameTimeStore } from '../../store/store';
@@ -17,15 +17,22 @@ export default function StartQuiz(props) {
   const { player, setPlayerName, addPlayerDifficulty, addPlayerTime, playerSelected, setPlayerSelected } = useQuizGamePlayerStore(store => ( { player: store.player, setPlayerName: store.setPlayerName, addPlayerDifficulty: store.addPlayerDifficulty, addPlayerTime: store.addPlayerTime,  playerSelected: store.playerSelected, setPlayerSelected: store.setPlayerSelected } ),
   shallow );
   const players = useQuizGamePlayersStore(store => store.players);
+
+  useEffect(() => {// if the user has certainly a name and if the user has selected the game modes, the game shall start
+    if(player.name && player.time && player.difficulty) setStartQuiz(true); 
+  }, [player.name, player.time, player.difficulty])
   
-  const handleTimeSelection = (time) => { // updates the time limit and the counter to the option the user selected, also it's responsible for the actual game start.
-    setTimeLimit(time);
-    setCounter(time);
-
-    addPlayerDifficulty(difficulty);
-    addPlayerTime(time);
-
-    if(player.name) setStartQuiz(true); // if the user has certainly a name, the game shall start
+  const handleSelection = (diffSelected, timeSelected) => { // function responsible for implementing the user specificities for the game
+    if (diffSelected) { // updates the game difficulty to the option the user selected
+      setDifficulty(diffSelected);
+      addPlayerDifficulty(diffSelected);
+    }
+    
+    if (timeSelected) { // updates the time limit and the counter to the option the user selected
+      setTimeLimit(timeSelected);
+      setCounter(timeSelected);
+      addPlayerTime(timeSelected);
+    }
   }
   
   const handleSubmit = (e) => {
@@ -34,12 +41,12 @@ export default function StartQuiz(props) {
     deactivateStartBtnStyle(); // imported function, it causes the affect of disappearing of the .start-quiz-btn
   }
 
-  const bestPlayersPreview = players[`${difficulty}`][`${timeLimit}`].map((player, id) => ( // element that represents a preview highlight of the best players based on the last users gameplay. 
-    <li key={id} className="quiz-bestPlayer-preview">
-         <span>Name:</span> {player.name}
-         <span>Score:</span> {player.score}
-     </li>
- ))
+  const bestPlayersPreview = difficulty ? players[`${difficulty}`][`${timeLimit}`].map((player, id) => ( // element that represents a preview highlight of the best players based on the last users game play. 
+  <li key={id} className="quiz-bestPlayer-preview">
+       <span>Name:</span> {player.name}
+       <span>Score:</span> {player.score}
+   </li>
+  )) : [];
 
   return (
     <div className="start-quiz-wrapper quiz-wrapper-main-style">
@@ -49,8 +56,8 @@ export default function StartQuiz(props) {
             <button className='start-quiz-btn quiz-main-btn-style'>start quiz</button>
         </form>
         <div className="quiz-specifications">
-          { playerSelected && <QuizDiff mainClassName={"quiz-difficulty"} classSelected={"quiz-specification-selected"} setState={setDifficulty} />}
-          { playerSelected && <QuizTime mainClassName={"quiz-timeOut"} classSelected={""} setState={handleTimeSelection}/>}
+          { playerSelected && <QuizDiff mainClassName={"quiz-difficulty"} classSelected={""} handleSelection={handleSelection}/>}
+          { playerSelected && <QuizTime mainClassName={"quiz-timeOut"} classSelected={""} handleSelection={handleSelection}/>}
         </div>
         <div className="players-info-wrapper">
           <ol className="bestPlayers-preview-wrapper">

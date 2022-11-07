@@ -10,7 +10,7 @@ import { getQuizQuestions } from '../store/functions';
 export default function QuizGamePage() {
   const [startQuiz, setStartQuiz] = useState(false);
   const [endQuiz, setEndQuiz] = useState(false);
-  const [difficulty, setDifficulty] = useState("easy");
+  const [difficulty, setDifficulty] = useState("");
   const [quizId, setQuizId] = useState(0);
  
   // OPEN TRIVIA DATABASE api call
@@ -24,7 +24,7 @@ export default function QuizGamePage() {
         <div className="container">
           {!startQuiz && !endQuiz && <StartQuiz difficulty={difficulty} setDifficulty={setDifficulty} setStartQuiz={setStartQuiz} />}
           {startQuiz && <QuizHandler data={data} isError={isError} isSuccess={isSuccess} quizId={quizId} setQuizId={setQuizId} setStartQuiz={setStartQuiz} setEndQuiz={setEndQuiz}/>}
-          {endQuiz && <EndQuiz setEndQuiz={setEndQuiz} setQuizId={setQuizId} refetch={refetch}/>}
+          {endQuiz && <EndQuiz setDifficulty={setDifficulty} setEndQuiz={setEndQuiz} setQuizId={setQuizId} refetch={refetch}/>}
         </div>
     </main>
   )

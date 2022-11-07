@@ -44,8 +44,8 @@ export default function QuizSpecs() {
                 </div>
             }
         </div>
-        <QuizDiff mainClassName={"diffSpec-selector"} classSelected={"quiz-specification-selected"} setState={setDiffSpec}/>
-        <QuizTime mainClassName={"timeSpec-selector"} classSelected={"quiz-specification-selected"}setState={setTimeSpec}/>
+        <QuizDiff mainClassName={"diffSpec-selector"} classSelected={"quiz-specification-selected"} setDiffSpec={setDiffSpec}/>
+        <QuizTime mainClassName={"timeSpec-selector"} classSelected={"quiz-specification-selected"} setTimeSpec={setTimeSpec}/>
         <button className='quiz-remove-player-data' onClick={removePlayers}>remove</button>
     </div>
   )
