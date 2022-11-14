@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import shallow from 'zustand/shallow';
 
 import { useQuizGamePlayersStore, useQuizGamePlayerStore, useQuizGameTimeStore } from '../../store/store';
@@ -14,9 +14,10 @@ export default function StartQuiz(props) {
   const { difficulty, setDifficulty, setStartQuiz } = props;
   const { timeLimit, setTimeLimit, setCounter } = useQuizGameTimeStore(store => ({ timeLimit: store.timeLimit, setTimeLimit: store.setTimeLimit, setCounter: store.setCounter, } ),
   shallow );
-  const { player, setPlayerName, addPlayerDifficulty, addPlayerTime, playerSelected, setPlayerSelected } = useQuizGamePlayerStore(store => ( { player: store.player, setPlayerName: store.setPlayerName, addPlayerDifficulty: store.addPlayerDifficulty, addPlayerTime: store.addPlayerTime,  playerSelected: store.playerSelected, setPlayerSelected: store.setPlayerSelected } ),
+  const { player, setPlayerName, addPlayerDifficulty, addPlayerTime, } = useQuizGamePlayerStore(store => ( { player: store.player, setPlayerName: store.setPlayerName, addPlayerDifficulty: store.addPlayerDifficulty, addPlayerTime: store.addPlayerTime, } ),
   shallow );
   const players = useQuizGamePlayersStore(store => store.players);
+  const [playerSelected, setPlayerSelected] = useState(false);
 
   useEffect(() => {// if the user has certainly a name and if the user has selected the game modes, the game shall start
     if(player.name && player.time && player.difficulty) setStartQuiz(true); 

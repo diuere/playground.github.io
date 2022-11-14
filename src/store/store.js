@@ -89,8 +89,5 @@ export const useQuizGamePlayerStore = create(set => (
         addPlayerDifficulty: (value) => set(store => ( { player: { ...store.player, difficulty: value },  })),
         addPlayerTime: (value) => set(store => ( { player: { ...store.player, time: value },  })),
         resetPlayer: () => set( { player: { name: "", score: 0, difficulty: "", time: 0, }, } ),
-
-        playerSelected: false,
-        setPlayerSelected: (booleanState) => set( {playerSelected: booleanState, } ),
     }
 ))
